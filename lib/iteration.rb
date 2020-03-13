@@ -6,15 +6,15 @@ def join_ingredients(src)
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
   # As such, there should be a new String for each inner array, or pair
-    result = []
+ 
+ result = []
 
   i = 0
   while i < src.length do
-    inner = src[i]
-    result << "I love #{inner[0]} and #{inner[1]} on my pizza"
+    result <<  (src[i][0] > src[i][1] ? src[i][0] : src[i][1])
     i += 1
   end
-  
+
   result
 end
 
